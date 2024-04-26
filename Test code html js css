@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Page Heading</h1>
+    <div class="container">
+        <div class="section" id="section1">
+            <div class="title">Chicken</div>
+            <p>Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="section" id="section2">
+            <div class="title">Beef</div>
+            <p>Consectetur adipiscing elit...</p>
+        </div>
+        <div class="section" id="section3">
+            <div class="title">Sushi</div>
+            <p>Sed do eiusmod tempor incididunt...</p>
+        </div>
+    </div>
+</body>
+</html>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    overflow: auto;
+}
+
+.section {
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+
+@media (min-width: 992px) {
+    .section {
+        width: 33.33%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 50%;
+    }
+    
+    #section3 {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
